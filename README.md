@@ -2,7 +2,7 @@
 * Status
   * finalizado
 * Preview
-  * https://ze-aglailson.github.io/Site-one-page/
+  * https://ze-aglailson.github.io/template-menu-responsivo-autoscroll/
 * Skills
   * HTML 
   * CSS  
