@@ -1,0 +1,6 @@
+@use 'v';
+.section-home{
+    background-color: v.$cor-primaria;
+    grid-column: inicio-left / fim-rigth;
+    grid-row:inicio-section-home / fim-section-home ;
+}

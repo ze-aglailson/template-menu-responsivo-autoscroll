@@ -1,0 +1,7 @@
+.section-home {
+  background-color: #ff6b81;
+  grid-column: inicio-left/fim-rigth;
+  grid-row: inicio-section-home/fim-section-home;
+}
+
+/*# sourceMappingURL=section-home.css.map */

@@ -1,0 +1,28 @@
+.container-principal {
+  position: relative;
+  display: grid;
+  grid-template-columns: [inicio-left] 30px [inicio-temp] 1fr repeat(12, 10px 1fr) [fim-temp] 30px [fim-rigth];
+  grid-template-rows: [inicio-section-home] min(100vh) [fim-section-home] 10px [inicio-section-servicos] min(100vh) [fim-section-servicos] 10px [inicio-section-precos] min(100vh) [fim-section-precos] 10px [inicio-section-sobre] min(100vh) [fim-section-sobre] 10px [inicio-section-time] min(100vh) [fim-section-time] 10px [inicio-section-contato] min(100vh) [fim-section-contato] 10px;
+}
+
+.contente-btn-volta-topo {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+.contente-btn-volta-topo .btn-volta-top {
+  padding: 5px 10px;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+  background-color: #ff6b81;
+  color: #FFFFFF;
+  border-radius: 3px;
+  display: none;
+}
+.contente-btn-volta-topo .btn-volta-top-visivel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=grid-principal.css.map */

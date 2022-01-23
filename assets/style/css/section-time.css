@@ -1,0 +1,6 @@
+.section-time {
+  grid-column: inicio-temp/fim-temp;
+  grid-row: inicio-section-time/fim-section-time;
+}
+
+/*# sourceMappingURL=section-time.css.map */

@@ -1,0 +1,215 @@
+@use 'v';
+
+.paraliza-body{
+    overflow: hidden;
+}
+
+.cabecalho-branco{
+    background-color:v.$cor-branco;
+    
+}
+
+.container-cabecalho{
+    width: 100%;
+    padding: v.$padding-container;
+    position: fixed;
+    z-index: 2;
+
+    .content-logo-btn-menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo{
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                color: v.$cor-branco;
+            }
+        }
+
+        .logo-escuro{
+            a{
+                color: v.$cor-secundaria;
+            }
+        }
+
+        .btn-menu{
+            width: 25px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            transition: .3s;
+            cursor: pointer;
+            z-index: 2;
+
+            .linha-btn{
+                display: block;
+                width: 100%;
+                height: 4px;
+                background-color:v.$cor-branco;
+                transition: .3s;
+            }
+        }
+        .btn-menu-escuro{
+            
+            .linha-btn{
+                background-color: v.$cor-secundaria;
+            }
+        }
+
+        .btn-menu-aberto{
+            justify-content: center;
+            .linha-btn-2{
+                margin-top: -4px;
+                transform: translateX(-100%);
+            }
+            .linha-btn-1{
+                transform: rotate(45deg);
+            }
+            .linha-btn-3{
+                margin-top: -4px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+//Configurações do menu
+
+.content-menu{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    background-color: rgba(0,0,0,0.5);
+    transition: .3s;
+    left: -100%;
+
+    .menu-principal{
+        width: 270px;
+        height: 100%;
+        background-color: v.$cor-branco;
+        transform: translateX(-50%);
+        transition: .5s;
+        overflow: hidden;
+
+        .ul-items-menu{
+            width: 100%;
+            border-top: 1px solid v.$cinza-claro;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 20px;
+
+            li.item{
+                width: 100%;
+                a{
+                    width: 100%;
+                    display: block;
+                    padding: 5px 30px;
+                    font-size: .9em;
+                    color: v.$cor-secundaria;
+                }
+            }
+            li.item:hover a{
+                color: v.$cor-branco;
+                background-color: v.$cor-primaria;
+            }
+        }
+    }
+}
+
+.content-menu-aberto{
+    top:0;
+    left: 0;
+    transition: .3s;
+
+    .menu-principal{
+        transform: translateX(0);
+        transition: .6s;
+    }
+
+    .btn-menu{
+        transition: .3s;
+    }
+}
+
+//Mediaqueries 
+@media screen and (min-width: 990px) {
+    .cabecalho-branco{ //Muda a cor dos itens do menu para cor secundaria 
+    
+        .content-logo-btn-menu{
+    
+            .content-menu{
+    
+                .menu-principal{
+    
+                    .ul-items-menu{
+    
+                        li.item{
+                            a{
+                                color: v.$cor-secundaria;
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+        
+    }
+    .container-cabecalho{
+        .content-logo-btn-menu{
+            .btn-menu{
+                display: none;
+            }
+            
+        }
+    }
+
+    .content-menu{
+        height: 100%;
+        width: auto;
+        position: relative;
+        left: inherit;
+        background-color: inherit;
+        transition: none;
+        
+        .menu-principal {
+            width: auto;
+            background-color: transparent;
+            transform: none;
+            padding: 0;
+            transition: none;
+
+            .ul-items-menu{
+                padding: 0;
+                height: 100%;
+                flex-direction: row;
+                border:none;
+
+                
+                li.item{
+                    width: auto;
+                    a{
+                        color: v.$cor-branco;
+                    }
+                }
+                
+                li.item:hover a{
+                    color: v.$cor-branco;
+                    background-color: transparent;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
