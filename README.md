@@ -1,6 +1,6 @@
-# Site One Page
+# Base para projetos responsivos
 * Status
-  * Em Andamento
+  * finalizado
 * Preview
   * https://ze-aglailson.github.io/Site-one-page/
 * Skills
